@@ -1,0 +1,53 @@
+name: "Feature Request (Copilot Agent Optimized)"
+description: "Copilot Coding Agent が正確にタスクを実行できる形で仕様を定義します。"
+title: "[Feature] "
+labels: ["feature", "copilot-task"]
+
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: "何を達成したいかを1文で記述してください。Copilot Agentが最も重視します。"
+      placeholder: "例：ユーザーがプロフィール情報を編集できるようにする。"
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: 📘ackground
+      description: "前提条件・関連情報など。"
+      placeholder: "- 現在の画面構成は〜\n- バックエンドは Express + PostgreSQL"
+  
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements
+      description: "実装すべき要件を箇条書きで指定してください。"
+      placeholder: "- PUT /api/profile を追加\n- displayName と bio を更新\n- バリデーション内容：〜"
+    validations:
+      required: true
+
+  - type: textarea
+    id: target_files
+    attributes:
+      label: Target Files
+      description: "編集して良いファイルを明記。Agent の誤編集を防ぎます。"
+      placeholder: "- backend/routes/profile.ts\n- frontend/pages/mypage.vue"
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: "やってはいけないこと、変更してはならない仕様を記述。"
+      placeholder: "- DB schema の変更は禁止\n- API 仕様の変更は禁止"
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: "完了判定基準を記述。Copilot の品質を大きく左右します。"
+      placeholder: "- 正常にプロフィールが更新できる\n- バリデーションが正しく動作\n- 既存テストが全て green"
+    validations:
+      required: true
