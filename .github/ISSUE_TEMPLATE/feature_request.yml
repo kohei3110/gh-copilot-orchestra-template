@@ -16,7 +16,7 @@ body:
   - type: textarea
     id: background
     attributes:
-      label: 📘ackground
+      label: Background
       description: "前提条件・関連情報など。"
       placeholder: "- 現在の画面構成は〜\n- バックエンドは Express + PostgreSQL"
   
@@ -28,13 +28,6 @@ body:
       placeholder: "- PUT /api/profile を追加\n- displayName と bio を更新\n- バリデーション内容：〜"
     validations:
       required: true
-
-  - type: textarea
-    id: target_files
-    attributes:
-      label: Target Files
-      description: "編集して良いファイルを明記。Agent の誤編集を防ぎます。"
-      placeholder: "- backend/routes/profile.ts\n- frontend/pages/mypage.vue"
 
   - type: textarea
     id: constraints
